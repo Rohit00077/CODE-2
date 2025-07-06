@@ -1,0 +1,249 @@
+/* Base Variables - Light Mode */
+:root {
+    /* Royal Blue & Black Theme */
+    --primary-color: #1E40AF;
+    --secondary-color: #1E3A8A;
+    --accent-color: #2563EB;
+    --dark-color: #0F172A;
+    --text-color: #1F2937;
+    --light-text: #F8FAFC;
+    --bg-color: #F1F5F9;
+    --card-bg: #FFFFFF;
+    --border-color: #E2E8F0;
+    --star-color: #F59E0B;
+    --available-color: #10B981;
+    --unavailable-color: #EF4444;
+}
+
+/* Dark Mode Variables */
+.dark-mode {
+    --primary-color: #1E3A8A;
+    --secondary-color: #0F172A;
+    --accent-color: #3B82F6;
+    --dark-color: #020617;
+    --text-color: #E2E8F0;
+    --light-text: #F8FAFC;
+    --bg-color: #0F172A;
+    --card-bg: #1E293B;
+    --border-color: #334155;
+    --star-color: #F59E0B;
+    --available-color: #10B981;
+    --unavailable-color: #EF4444;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Theme Switcher */
+.theme-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#themeToggle {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#themeToggle .fa-sun {
+    display: none;
+}
+
+.dark-mode #themeToggle .fa-moon {
+    display: none;
+}
+
+.dark-mode #themeToggle .fa-sun {
+    display: block;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    font-size: 28px;
+    color: var(--light-text);
+    font-weight: 700;
+}
+
+.logo h1 span {
+    color: #F59E0B;
+}
+
+.logo p {
+    color: var(--light-text);
+    font-size: 12px;
+    margin-top: -5px;
+    text-align: right;
+    opacity: 0.8;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: var(--light-text);
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #F59E0B;
+}
+
+.mobile-menu {
+    display: none;
+    color: var(--light-text);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://images.unsplash.com/photo-1518895949257-7621c6c86dcc') no-repeat center center/cover;
+    color: var(--light-text);
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+}
+
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+/* Reviews Section */
+.reviews {
+    padding: 60px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h3 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.sort-options {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-options select {
+    padding: 8px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    font-size: 14px;
+}
+.faq-section {
+  margin-top: 60px;
+  padding: 40px 25px;
+}
+
+.faq-title {
+  text-align: center;
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+
+.faq-item {
+  margin-bottom: 15px;
+  border-bottom: 1px solid #ccc;
+}
+
+.faq-question {
+  width: 100%;
+  text-align: left;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px;
+  background: none;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.faq-answer {
+  display: none;
+  padding: 0 15px 15px 15px;
+  font-size: 16px;
+  line-height: 1.6;
+}

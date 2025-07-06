@@ -1,0 +1,763 @@
+/* Base Variables - Light Mode */
+:root {
+    /* Royal Blue & Black Theme */
+    --primary-color: #1E40AF;
+    --secondary-color: #1E3A8A;
+    --accent-color: #2563EB;
+    --dark-color: #0F172A;
+    --text-color: #1F2937;
+    --light-text: #F8FAFC;
+    --bg-color: #F1F5F9;
+    --card-bg: #FFFFFF;
+    --border-color: #E2E8F0;
+    --star-color: #F59E0B;
+    --available-color: #10B981;
+    --unavailable-color: #EF4444;
+}
+
+/* Dark Mode Variables */
+.dark-mode {
+    --primary-color: #1E3A8A;
+    --secondary-color: #0F172A;
+    --accent-color: #3B82F6;
+    --dark-color: hsl(229, 84%, 5%);
+    --text-color: #E2E8F0;
+    --light-text: #F8FAFC;
+    --bg-color: #0F172A;
+    --card-bg: #1E293B;
+    --border-color: #334155;
+    --star-color: #F59E0B;
+    --available-color: #10B981;
+    --unavailable-color: #EF4444;
+}
+
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* Theme Switcher */
+.theme-switcher {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 1000;
+}
+
+#themeToggle {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+#themeToggle .fa-sun {
+    display: none;
+}
+
+.dark-mode #themeToggle .fa-moon {
+    display: none;
+}
+
+.dark-mode #themeToggle .fa-sun {
+    display: block;
+}
+
+/* Header Styles */
+header {
+    background-color: var(--primary-color);
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+    font-size: 28px;
+    color: var(--light-text);
+    font-weight: 700;
+}
+
+.logo h1 span {
+    color: #F59E0B;
+}
+
+.logo p {
+    color: var(--light-text);
+    font-size: 12px;
+    margin-top: -5px;
+    text-align: right;
+    opacity: 0.8;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 25px;
+}
+
+nav ul li a {
+    color: var(--light-text);
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #F59E0B;
+}
+
+.mobile-menu {
+    display: none;
+    color: var(--light-text);
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+        url('https://images.unsplash.com/photo-1518895949257-7621c6c86dcc') no-repeat center center/cover;
+    color: var(--light-text);
+    text-align: center;
+    padding: 100px 0;
+}
+
+.hero h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 18px;
+    max-width: 700px;
+    margin: 0 auto 30px;
+    opacity: 0.9;
+}
+
+.trust-badges {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.badge {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+}
+
+/* Reviews Section */
+.reviews {
+    padding: 60px 0;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-header h3 {
+    font-size: 32px;
+    color: var(--primary-color);
+    margin-bottom: 10px;
+}
+
+.sort-options {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.sort-options select {
+    padding: 8px 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    background: var(--card-bg);
+    color: var(--text-color);
+    font-size: 14px;
+}
+
+.review-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 25px;
+    margin-bottom: 40px;
+}
+
+.review-card {
+    background: var(--card-bg);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+    position: relative;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.review-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+.rank-badge {
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    background: var(--primary-color);
+    color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 18px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.vip-badge {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background: #F59E0B;
+    color: var(--dark-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.card-header {
+    padding: 20px;
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    align-items: center;
+}
+
+.casino-logo {
+    width: 140px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.casino-logo img {
+    max-height: 100%;
+    max-width: 100%;
+    object-fit: contain;
+}
+
+.rating {
+    margin-left: auto;
+    text-align: right;
+}
+
+.stars {
+    color: var(--star-color);
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.stars span {
+    color: var(--text-color);
+    font-weight: 600;
+    margin-left: 5px;
+}
+
+.review-count {
+    font-size: 12px;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-body h4 {
+    font-size: 20px;
+    color: var(--text-color);
+    margin-bottom: 15px;
+}
+
+.payout-box {
+    background: rgba(30, 64, 175, 0.1);
+    border-left: 3px solid var(--primary-color);
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+.payout-box strong {
+    display: block;
+    color: var(--text-color);
+    margin-bottom: 5px;
+    font-size: 14px;
+}
+
+.payout-box div {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.available {
+    color: var(--available-color);
+}
+
+.features {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.feature {
+    display: flex;
+    align-items: flex-start;
+    font-size: 14px;
+    gap: 8px;
+}
+
+.feature i {
+    color: var(--primary-color);
+    font-size: 16px;
+    margin-top: 2px;
+}
+
+.payment-methods {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.payment-methods i {
+    font-size: 20px;
+    color: var(--primary-color);
+    opacity: 0.8;
+}
+
+.payment-methods span {
+    font-size: 12px;
+    color: var(--text-color);
+    opacity: 0.7;
+}
+
+.card-footer {
+    display: flex;
+    border-top: 1px solid var(--border-color);
+}
+
+.play-btn,
+.review-btn {
+    flex: 1;
+    text-align: center;
+    padding: 15px;
+    font-weight: 600;
+    transition: all 0.3s;
+    font-size: 15px;
+}
+
+.play-btn {
+    background: var(--primary-color);
+    color: var(--light-text);
+}
+
+.play-btn:hover {
+    background: var(--secondary-color);
+}
+
+.review-btn {
+    background: rgba(30, 64, 175, 0.1);
+    color: var(--primary-color);
+}
+
+.review-btn:hover {
+    background: rgba(30, 64, 175, 0.2);
+}
+
+/* Footer Styles */
+footer {
+    background: var(--dark-color);
+    color: var(--light-text);
+    padding: 40px 0 0;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+.footer-section {
+    margin-bottom: 20px;
+}
+
+.footer-section h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #F59E0B;
+}
+
+.footer-section p {
+    margin-bottom: 15px;
+    font-size: 14px;
+    opacity: 0.8;
+}
+
+.footer-section ul {
+    list-style: none;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: var(--light-text);
+    opacity: 0.8;
+    font-size: 14px;
+    transition: opacity 0.3s;
+}
+
+.footer-section ul li a:hover {
+    opacity: 1;
+    color: #F59E0B;
+}
+
+.footer-logo h3 {
+    font-size: 24px;
+    color: var(--light-text);
+    margin-top: 15px;
+}
+
+.footer-logo h3 span {
+    color: #F59E0B;
+}
+
+.footer-bottom {
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-bottom p {
+    font-size: 14px;
+    margin-bottom: 15px;
+    opacity: 0.8;
+}
+
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.social-links a {
+    color: var(--light-text);
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.1);
+    transition: all 0.3s;
+}
+
+.social-links a:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+    nav ul {
+        display: none;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        background: var(--primary-color);
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .review-cards {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .section-header h3 {
+        font-size: 26px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .hero {
+        padding: 60px 0;
+    }
+
+    .review-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card-header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .rating {
+        margin: 15px 0 0;
+        text-align: center;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.review-summary {
+    background: #f5f7fa;
+    padding: 20px;
+    border-radius: 8px;
+    margin-bottom: 20px;
+    color: #000;
+}
+
+body.dark-mode .review-summary {
+    background: #121212;
+    color: #fff;
+}
+
+
+body.dark-mode .review-summary h1,
+body.dark-mode .review-summary p,
+body.dark-mode .review-summary a {
+    color: #ffffff !important;
+}
+
+.casino-review {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 16px;
+    color: var(--text-color);
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.box-section {
+    background-color: var(--box-bg);
+    color: var(--box-color);
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.box-section h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+}
+
+.grid-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.item-box {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    width: 80px;
+    height: 45px;
+    text-align: center;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+}
+
+body.dark-mode .item-box {
+    background-color: #4a4545;
+    border-color: #666;
+    color: #fff;
+}
+
+.item-box:hover {
+    transform: scale(1.05);
+}
+
+.item-box img {
+    max-width: 100%;
+    height: 30px;
+    margin-bottom: 8px;
+}
+
+.item-box span {
+    font-size: 13px;
+    display: block;
+    color: inherit;
+}
+.game-selection {
+  padding: 50px 25px;
+  margin-top: 60px; /* spacing from previous section */
+  border-radius: 10px;
+}
+
+.game-selection h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.game-selection p {
+  font-size: 16px;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+.game-selection ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.game-selection li {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 15px;
+}
+/* FAQ section support for dark mode */
+body.dark-mode .faq-section,
+.dark-mode .faq-section {
+  background-color: transparent;
+}
+
+body.dark-mode .faq-question,
+.dark-mode .faq-question {
+  color: #fff;
+}
+
+body.dark-mode .faq-answer,
+.dark-mode .faq-answer {
+  color: #ddd;
+  border-color: #444;
+}
+
+/* Bullet hataye */
+.no-bullets {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* Tick/Cross aur text ke beech spacing */
+.no-bullets li {
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 1.5;
+  display: flex;
+  align-items: center;
+}
+
+/* Green tick icon */
+.green-tick {
+  color: green;
+  margin-right: 8px;
+}
+
+/* Red cross icon */
+.red-cross {
+  color: red;
+  margin-right: 8px;
+}
