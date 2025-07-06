@@ -463,6 +463,98 @@
         <!-- Add more provider boxes as needed -->
       </div>
     </section>
+    <div class="payment-methods-container">
+  <h3>Payment Methods</h3>
+  <div class="scrollable-table-wrapper">
+    <table>
+      <thead>
+        <tr>
+          <th style="text-align: left;">METHOD</th>
+          <th style="text-align: right;">MIN DEPOSIT</th>
+          <th style="text-align: right;">MAX DEPOSIT</th>
+          <th style="text-align: right;">MIN WITHDRAWAL</th>
+          <th style="text-align: right;">MAX WITHDRAWAL</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/UPI_logo.svg/1200px-UPI_logo.svg.png"
+              alt="UPI">
+            UPI
+          </td>
+          <td style="text-align: right;">500</td>
+          <td style="text-align: right;">50,000</td>
+          <td style="text-align: right;">1,000</td>
+          <td style="text-align: right;">50,000</td>
+        </tr>
+        <!-- All other payment method rows here -->
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<style>
+  .payment-methods-container {
+    margin: 30px 0;
+    padding: 0 15px;
+  }
+  
+  .payment-methods-container h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .scrollable-table-wrapper {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    background: white;
+    padding: 10px;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 600px; /* Minimum width before scrolling kicks in */
+    font-size: 14px;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+    white-space: nowrap;
+  }
+  
+  th {
+    font-weight: bold;
+    background: #f5f5f5;
+    position: sticky;
+    top: 0;
+  }
+  
+  td img {
+    height: 20px;
+    vertical-align: middle;
+    margin-right: 8px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    th, td {
+      padding: 8px;
+      font-size: 13px;
+    }
+    
+    td img {
+      height: 18px;
+      margin-right: 6px;
+    }
+  }
+</style>
     <div class="faq-section">
             <h2 class="faq-title">FAQ</h2>
 
