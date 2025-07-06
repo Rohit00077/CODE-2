@@ -463,6 +463,168 @@
         <!-- Add more provider boxes as needed -->
       </div>
     </section>
+    <div class="faq-section">
+            <h2 class="faq-title">FAQ</h2>
+
+            <div class="faq-item">
+                <button class="faq-question"> What is Review5Star?</button>
+                <div class="faq-answer">
+                    <p> Review5Star is a trusted platform that provides honest, in-depth reviews of online casinos, including bonuses, games, payment options, and user experiences. Our goal is to help players find the best casinos online.
+</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question"> Is Review5Star a casino operator?</button>
+                <div class="faq-answer">
+                    <p>No, we do not operate any casino. We are an affiliate website that provides helpful reviews and guides for online casino players.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question"> How do you rate online casinos?</button>
+                <div class="faq-answer">
+                    <p>Our rating system is based on key factors like bonus offers, game variety, payment speed, customer support, and player feedback. We test each site before rating it.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Is Review5Star free to use?</button>
+                <div class="faq-answer">
+                    <p>Yes, our website is 100% free to use. You can browse casino reviews, compare offers, and read guides without paying anything.
+</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How do I know if a casino is safe?
+</button>
+                <div class="faq-answer">
+                    <p>All casinos featured on Review5Star are licensed by regulatory bodies like Curaçao, Malta, or UKGC. We also check for secure payment options and responsible gambling practices.
+</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">What is an online casino?
+</button>
+                <div class="faq-answer">
+                    <p>An online casino is a digital platform where players can wager real money on games like slots, blackjack, roulette, poker, and more.
+
+</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Can I win real money at online casinos?
+</button>
+                <div class="faq-answer">
+                    <p>Yes! If you play with real money and win, your earnings can be withdrawn depending on the casino's policies.
+</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question"> What are casino bonuses?
+</button>
+                <div class="faq-answer">
+                    <p>Bonuses are promotional offers like welcome bonuses, free spins, no-deposit bonuses, and cashback that give you extra value when signing up or playing.
+</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Are online casinos legal in India?
+</button>
+                <div class="faq-answer">
+                    <p>Online casinos operate in a grey area in India. Most international platforms accept Indian players and allow INR transactions, but players should check the legality in their specific state.
+</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">How fast can I withdraw my winnings?
+</button>
+                <div class="faq-answer">
+                    <p>It depends on the casino. Some process withdrawals in 1–2 hours, while others may take 24–48 hours.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Is there a minimum age to play online casinos?
+</button>
+                <div class="faq-answer">
+                    <p>Yes. You must be 18+ years old to gamble online.</p>
+                </div>
+            </div>
+
+            <div class="faq-item">
+                <button class="faq-question">Are my winnings taxable?</button>
+                <div class="faq-answer">
+                    <p>Yes, casino winnings are taxable under Indian income tax laws.</p>
+                </div>
+            </div>
+        </div>
+
+        <style>
+            .faq-section {
+                margin-top: 50px;
+                padding: 20px;
+            }
+
+            .faq-title {
+                font-size: 28px;
+                font-weight: bold;
+                text-align: center;
+                margin-bottom: 30px;
+            }
+
+            .faq-item {
+                border-bottom: 1px solid #ccc;
+                margin-bottom: 10px;
+            }
+
+            .faq-question {
+                width: 100%;
+                padding: 15px;
+                font-size: 18px;
+                font-weight: 600;
+                text-align: left;
+                background: none;
+                border: none;
+                cursor: pointer;
+                outline: none;
+            }
+
+            .faq-answer {
+                display: none;
+                padding: 0 15px 15px 15px;
+                font-size: 16px;
+                line-height: 1.6;
+            }
+
+            .faq-item.active .faq-answer {
+                display: block;
+            }
+        </style>
+
+        <script>
+            document.querySelectorAll('.faq-question').forEach(button => {
+                button.addEventListener('click', () => {
+                    const item = button.parentElement;
+
+                    // Remove active from others
+                    document.querySelectorAll('.faq-item').forEach(faq => {
+                        if (faq !== item) faq.classList.remove('active');
+                    });
+
+                    // Toggle this one
+                    item.classList.toggle('active');
+                });
+            });
+        </script>
+
+    </section>
     
 
     <footer>
