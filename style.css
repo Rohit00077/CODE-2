@@ -784,4 +784,16 @@ body.dark-mode .faq-answer,
 .dark-mode .scrollable-table-wrapper table a {
     color: #ffffff !important;
 }
+ /* Dark Mode styles */
+.dark .pros-section {
+    background-color: #1e2b1e !important;
+    border-left: 4px solid #8BC34A !important;
+    color: #ffffff !important;
+}
+
+.dark .cons-section {
+    background-color: #2b1e1e !important;
+    border-left: 4px solid #E57373 !important;
+    color: #ffffff !important;
+}
 
