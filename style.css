@@ -616,6 +616,9 @@ body.dark-mode .review-summary a {
 
 .casino-review {
     max-width: 900px;
+    width: 100%;
+    padding: 0 15px;
+    box-sizing:border-box;
     margin: 0 auto;
 }
 
