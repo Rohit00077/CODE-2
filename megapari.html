@@ -542,59 +542,128 @@
         <!-- Add more provider boxes as needed -->
       </div>
     </section>
+    <style>
+        /* Base Styles */
+        .pros-cons-container {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            max-width: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+            line-height: 1.5;
+        }
+        
+        .pros-section, .cons-section {
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        
+        .pros-section {
+            background-color: #f8fff8;
+            border-left: 4px solid #4CAF50;
+        }
+        
+        .cons-section {
+            background-color: #fff8f8;
+            border-left: 4px solid #F44336;
+        }
+        
+        h3 {
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .no-bullets {
+            padding-left: 0;
+            list-style: none;
+        }
+        
+        .no-bullets li {
+            padding: 8px 0;
+            display: flex;
+            align-items: flex-start;
+            font-size: 1rem;
+        }
+        
+        .green-tick {
+            color: #4CAF50;
+            margin-right: 10px;
+            min-width: 20px;
+            font-size: 1.2rem;
+        }
+        
+        .red-cross {
+            color: #F44336;
+            margin-right: 10px;
+            min-width: 20px;
+            font-size: 1.2rem;
+        }
+        
+        /* Responsive Adjustments */
+        @media (min-width: 768px) {
+            .pros-cons-container {
+                flex-direction: row;
+                gap: 30px;
+            }
+            
+            .pros-section, .cons-section {
+                flex: 1;
+            }
+            
+            h3 {
+                font-size: 1.5rem;
+            }
+            
+            .no-bullets li {
+                font-size: 1.1rem;
+            }
+        }
+        
+        /* Touch-friendly enhancements */
+        .no-bullets li {
+            padding: 12px 0;
+        }
+        
+        /* Improve text readability on small screens */
+        @media (max-width: 480px) {
+            .no-bullets li {
+                font-size: 0.95rem;
+                line-height: 1.6;
+            }
+        }
+    </style>
+</head>
+<body>
     <div class="pros-cons-container">
-
-      <div class="pros-section">
-        <h3>Positive Points</h3>
-        <ul class="no-bullets">
-          <li><i class="fas fa-check-circle green-tick"></i>Wide Game Selection :  Offers thousands of casino
-                        games,
-                        including slots, table games, and live dealer options.</li>
-          <li><i class="fas fa-check-circle green-tick"></i>Sports Betting Included: You can place bets on sports events
-            in addition to playing casino games, which is convenient for hybrid bettors.</li>
-          <li><i class="fas fa-check-circle green-tick"></i>Attractive Bonuses: Generous welcome bonuses and ongoing
-            promotions for new and existing players.</li>
-          <li><i class="fas fa-check-circle green-tick"></i>Cryptocurrency Support: Accepts Bitcoin and many other
-            cryptocurrencies for deposits and withdrawals.</li>
-          <li><i class="fas fa-check-circle green-tick"></i>Fast Registration: Very quick and simple sign-up process,
-            with options for one-click registration.</li>
-          <li><i class="fas fa-check-circle green-tick"></i>Multilingual Platform: Supports dozens of languages, making
-            it accessible to international players.</li>
-          <li><i class="fas fa-check-circle green-tick"></i>Mobile-Friendly: Has a responsive website and dedicated
-            mobile apps for both Android and iOS.</li>
-          <li><i class="fas fa-check-circle green-tick"></i>Variety of Payment Options: Supports a wide range of
-            deposit/withdrawal methods, including e-wallets, crypto, and bank cards.
-
-          </li>
-          <li><i class="fas fa-check-circle green-tick"></i>High Betting Odds: Competitive odds for sports betting
-            markets.</li>
-        </ul>
-      </div>
-      <div class="cons-section">
-        <h3>Negative Points</h3>
-        <ul class="no-bullets">
-          <li><i class="fas fa-times-circle red-cross"></i>Limited Licensing Transparency: Licensed in Curaçao, which is
-            considered a weaker regulatory jurisdiction compared to Malta or the UK.</li>
-          <li><i class="fas fa-times-circle red-cross"></i>Country Restrictions: Players from some countries cannot
-            register or may have limited access.</li>
-          <li><i class="fas fa-times-circle red-cross"></i>High Wagering Requirements: Some bonuses come with high
-            wagering conditions, making them harder to clear.
-
-          </li>
-          <li><i class="fas fa-times-circle red-cross"></i>Complex Website Interface: The website can feel overcrowded
-            or confusing for new players due to too many options on the homepage.
-
-          </li>
-          <li><i class="fas fa-times-circle red-cross"></i>Slow Customer Support at Times: Some players report delays in
-            getting responses from customer support.
-
-          </li>
-          <li><i class="fas fa-times-circle red-cross"></i>Limited Responsible Gambling Tools: Fewer responsible
-            gambling features compared to more strictly regulated casinos.
-
-          </li>
-        </ul>
-      </div>
+        <div class="pros-section">
+            <h3>Positive Points</h3>
+            <ul class="no-bullets">
+                <li><i class="fas fa-check-circle green-tick"></i><span>Wide Game Selection: Offers thousands of casino games, including slots, table games, and live dealer options.</span></li>
+                <li><i class="fas fa-check-circle green-tick"></i><span>Sports Betting Included: You can place bets on sports events in addition to playing casino games, which is convenient for hybrid bettors.</span></li>
+                <li><i class="fas fa-check-circle green-tick"></i><span>Attractive Bonuses: Generous welcome bonuses and ongoing promotions for new and existing players.</span></li>
+                <li><i class="fas fa-check-circle green-tick"></i><span>Cryptocurrency Support: Accepts Bitcoin and many other cryptocurrencies for deposits and withdrawals.</span></li>
+                <li><i class="fas fa-check-circle green-tick"></i><span>Fast Registration: Very quick and simple sign-up process, with options for one-click registration.</span></li>
+                <li><i class="fas fa-check-circle green-tick"></i><span>Multilingual Platform: Supports dozens of languages, making it accessible to international players.</span></li>
+                <li><i class="fas fa-check-circle green-tick"></i><span>Mobile-Friendly: Has a responsive website and dedicated mobile apps for both Android and iOS.</span></li>
+                <li><i class="fas fa-check-circle green-tick"></i><span>Variety of Payment Options: Supports a wide range of deposit/withdrawal methods, including e-wallets, crypto, and bank cards.</span></li>
+                <li><i class="fas fa-check-circle green-tick"></i><span>High Betting Odds: Competitive odds for sports betting markets.</span></li>
+            </ul>
+        </div>
+        <div class="cons-section">
+            <h3>Negative Points</h3>
+            <ul class="no-bullets">
+                <li><i class="fas fa-times-circle red-cross"></i><span>Limited Licensing Transparency: Licensed in Curaçao, which is considered a weaker regulatory jurisdiction compared to Malta or the UK.</span></li>
+                <li><i class="fas fa-times-circle red-cross"></i><span>Country Restrictions: Players from some countries cannot register or may have limited access.</span></li>
+                <li><i class="fas fa-times-circle red-cross"></i><span>High Wagering Requirements: Some bonuses come with high wagering conditions, making them harder to clear.</span></li>
+                <li><i class="fas fa-times-circle red-cross"></i><span>Complex Website Interface: The website can feel overcrowded or confusing for new players due to too many options on the homepage.</span></li>
+                <li><i class="fas fa-times-circle red-cross"></i><span>Slow Customer Support at Times: Some players report delays in getting responses from customer support.</span></li>
+                <li><i class="fas fa-times-circle red-cross"></i><span>Limited Responsible Gambling Tools: Fewer responsible gambling features compared to more strictly regulated casinos.</span></li>
+            </ul>
+        </div>
     </div>
     <div class="payment-methods-container">
         <tr>
