@@ -755,9 +755,42 @@
       height: 18px;
       margin-right: 6px;
     }
+    /* Dark mode styles - matches your existing implementation */
+  .dark-mode .scrollable-table-wrapper {
+    background: #2d2d2d;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+  }
+  
+  .dark-mode table {
+    color: #ffffff;
+  }
+  
+  .dark-mode th {
+    background: #3d3d3d;
+    color: #ffffff;
+  }
+  
+  .dark-mode td {
+    border-bottom-color: #444;
+  }
+  
+  .dark-mode td img {
+    filter: brightness(0) invert(0.9);
+  }
+
+  @media (max-width: 768px) {
+    th, td {
+      padding: 8px;
+      font-size: 13px;
+    }
+    
+    td img {
+      height: 18px;
+      margin-right: 6px;
+    }
   }
 </style>
-    <script src="script.js"></script>
+    
     <div class="faq-section">
             <h2 class="faq-title">FAQ</h2>
 
