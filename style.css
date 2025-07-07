@@ -762,3 +762,25 @@ body.dark-mode .faq-answer,
   color: red;
   margin-right: 8px;
 }
+/* tumhara pura existing code... */
+
+@media (max-width: 768px) {
+    th, td {
+        padding: 8px;
+        font-size: 13px;
+    }
+}
+
+/* === Dark mode fixes for payment methods === */
+.dark-mode .payment-methods-container h3 {
+    color: #ffffff;
+}
+
+.dark-mode .scrollable-table-wrapper table th,
+.dark-mode .scrollable-table-wrapper table td {
+    color: #ffffff !important;
+}
+
+.dark-mode .scrollable-table-wrapper table a {
+    color: #ffffff !important;
+}
