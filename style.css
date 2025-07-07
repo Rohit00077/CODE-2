@@ -614,12 +614,10 @@ body.dark-mode .review-summary a {
     color: #ffffff !important;
 }
 
-.casino-review {
-    max-width: 900px;
-    width: 100%;
-    padding: 0 15px;
-    box-sizing:border-box;
-    margin: 0 auto;
+@media screen and (max-width: 600px) {
+    .casino-review {
+      padding: 0 15px;
+    }
 }
 
 h1 {
