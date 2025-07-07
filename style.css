@@ -784,12 +784,4 @@ body.dark-mode .faq-answer,
 .dark-mode .scrollable-table-wrapper table a {
     color: #ffffff !important;
 }
-.dark .pros-section {
-  background-color: #1e2b1e;
-  color: #ffffff;
-}
 
-.dark .cons-section {
-  background-color: #2b1e1e;
-  color: #ffffff;
-}
