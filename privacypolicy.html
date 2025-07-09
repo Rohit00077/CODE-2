@@ -37,409 +37,182 @@
             </div>
         </div>
     </header>
-    <style>
-        /* ===== BASE STYLES ===== */
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background-color: #f9f9f9;
-            padding: 0;
-            margin: 0;
-        }
-        
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 15px;
-        }
-        
-        /* ===== HEADER STYLES ===== */
-        header {
-            background-color: #fff;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            padding: 15px 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-        
-        .header-container {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-        
-        .logo {
-            font-size: 1.8rem;
-            font-weight: 700;
-            color: #333;
-            text-decoration: none;
-        }
-        
-        .logo span {
-            color: #e63946;
-        }
-        
-        /* ===== PRIVACY POLICY CONTENT ===== */
-        .privacy-container {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
-            padding: 30px;
-            margin: 30px 0;
-        }
-        
-        .privacy-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-        
-        .privacy-header h1 {
-            font-size: 2rem;
-            color: #222;
-            margin-bottom: 10px;
-        }
-        
-        .privacy-header p {
-            color: #666;
-            font-size: 1rem;
-        }
-        
-        .privacy-content h2 {
-            font-size: 1.5rem;
-            color: #333;
-            margin: 25px 0 15px;
-            padding-bottom: 8px;
-            border-bottom: 1px solid #eee;
-        }
-        
-        .privacy-content h3 {
-            font-size: 1.2rem;
-            color: #444;
-            margin: 20px 0 10px;
-        }
-        
-        .privacy-content p {
-            margin-bottom: 15px;
-            font-size: 1rem;
-            color: #555;
-        }
-        
-        .privacy-content ul {
-            margin-bottom: 15px;
-            padding-left: 20px;
-        }
-        
-        .privacy-content li {
-            margin-bottom: 8px;
-            font-size: 1rem;
-            color: #555;
-        }
-        
-        .last-updated {
-            font-style: italic;
-            color: #777;
-            text-align: right;
-            margin-top: 30px;
-        }
-        
-        /* ===== FOOTER STYLES ===== */
-        footer {
-            background-color: #222;
-            color: #fff;
-            padding: 40px 0 20px;
-        }
-        
-        .footer-container {
-            display: grid;
-            grid-template-columns: 1fr;
-            gap: 30px;
-        }
-        
-        .footer-section {
-            margin-bottom: 20px;
-        }
-        
-        .footer-section h4 {
-            font-size: 1.2rem;
-            margin-bottom: 15px;
-            color: #fff;
-        }
-        
-        .footer-links {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 10px;
-        }
-        
-        .footer-links a {
-            color: #bbb;
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-        
-        .footer-links a:hover {
-            color: #fff;
-        }
-        
-        .footer-bottom {
-            text-align: center;
-            padding-top: 20px;
-            margin-top: 20px;
-            border-top: 1px solid #444;
-        }
-        
-        .footer-bottom p {
-            font-size: 0.9rem;
-            color: #bbb;
-            margin-bottom: 10px;
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            margin-top: 15px;
-        }
-        
-        .social-links a {
-            color: #fff;
-            font-size: 1.2rem;
-            transition: color 0.3s;
-        }
-        
-        .social-links a:hover {
-            color: #e63946;
-        }
-        
-        /* ===== BACK TO TOP BUTTON ===== */
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #e63946;
-            color: white;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            font-size: 1.5rem;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.3s;
-        }
-        
-        .back-to-top.visible {
-            opacity: 1;
-            visibility: visible;
-        }
-        
-        /* ===== RESPONSIVE STYLES ===== */
-        @media (min-width: 768px) {
-            .footer-container {
-                grid-template-columns: repeat(2, 1fr);
-            }
-            
-            .privacy-header h1 {
-                font-size: 2.5rem;
-            }
-        }
-        
-        @media (min-width: 992px) {
-            .footer-container {
-                grid-template-columns: repeat(4, 1fr);
-            }
-            
-            .privacy-content h2 {
-                font-size: 1.8rem;
-            }
-        }
-    </style>
-</head>
-<body>
-    <!-- Header Section -->
-    <header>
-        <div class="container header-container">
-            <a href="index.html" class="logo">Review<span>5</span>Star</a>
+<section class="privacy-policy">
+    <div class="container">
+        <div class="policy-header">
+            <h1>Privacy Policy</h1>
+            <p class="last-updated">Last Updated: <span id="current-date"></span></p>
         </div>
-    </header>
-
-    <!-- Privacy Policy Content -->
-    <main class="container">
-        <div class="privacy-container">
-            <div class="privacy-header">
-                <h1>Privacy Policy</h1>
-                <p>Last Updated: June 10, 2024</p>
+        
+        <div class="policy-content">
+            <div class="policy-section">
+                <h2>1. Information Collection</h2>
+                <p>We collect information when you:</p>
+                <ul>
+                    <li>Register on our site</li>
+                    <li>Subscribe to our newsletter</li>
+                    <li>Fill out forms or surveys</li>
+                    <li>Use our comparison tools</li>
+                </ul>
+                <p>Types of data collected may include name, email address, and browsing behavior.</p>
             </div>
-            
-            <div class="privacy-content">
-                <h2>1. Introduction</h2>
-                <p>Welcome to Review5Star ("we," "our," or "us"). We are committed to protecting your privacy and ensuring the security of your personal information. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website.</p>
-                
-                <h2>2. Information We Collect</h2>
-                <p>We may collect the following types of information:</p>
-                
-                <h3>Personal Information</h3>
+
+            <div class="policy-section">
+                <h2>2. Use of Information</h2>
+                <p>Your information helps us to:</p>
                 <ul>
-                    <li>Name</li>
-                    <li>Email address</li>
-                    <li>Contact information</li>
-                    <li>Demographic information</li>
+                    <li>Personalize user experience</li>
+                    <li>Improve our website</li>
+                    <li>Send periodic emails</li>
+                    <li>Provide accurate casino comparisons</li>
                 </ul>
-                
-                <h3>Non-Personal Information</h3>
+            </div>
+
+            <div class="policy-section">
+                <h2>3. Data Protection</h2>
+                <p>We implement security measures including:</p>
                 <ul>
-                    <li>Browser type and version</li>
-                    <li>IP address</li>
-                    <li>Pages visited on our site</li>
-                    <li>Time and date of visits</li>
+                    <li>Regular malware scanning</li>
+                    <li>Secure socket layer (SSL) technology</li>
+                    <li>Limited access to personal data</li>
                 </ul>
-                
-                <h2>3. How We Use Your Information</h2>
-                <p>We use the information we collect for various purposes:</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>4. Cookies</h2>
+                <p>We use cookies to:</p>
                 <ul>
-                    <li>To provide and maintain our service</li>
-                    <li>To notify you about changes to our service</li>
-                    <li>To allow you to participate in interactive features</li>
-                    <li>To provide customer support</li>
-                    <li>To gather analysis or valuable information to improve our site</li>
-                    <li>To monitor the usage of our service</li>
-                    <li>To detect, prevent and address technical issues</li>
+                    <li>Understand user preferences</li>
+                    <li>Compile aggregate data</li>
+                    <li>Improve site functionality</li>
                 </ul>
-                
-                <h2>4. Cookies and Tracking Technologies</h2>
-                <p>We use cookies and similar tracking technologies to track activity on our website and hold certain information. Cookies are files with small amounts of data which may include an anonymous unique identifier.</p>
-                <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our site.</p>
-                
-                <h2>5. Third-Party Services</h2>
-                <p>We may employ third-party companies and individuals to facilitate our service, provide the service on our behalf, perform service-related services, or assist us in analyzing how our service is used.</p>
-                <p>These third parties have access to your personal information only to perform these tasks on our behalf and are obligated not to disclose or use it for any other purpose.</p>
-                
-                <h2>6. Data Security</h2>
-                <p>We implement appropriate technical and organizational measures to maintain the safety of your personal information. However, no method of transmission over the Internet or method of electronic storage is 100% secure.</p>
-                
-                <h2>7. Children's Privacy</h2>
-                <p>Our service does not address anyone under the age of 18 ("Children"). We do not knowingly collect personally identifiable information from anyone under the age of 18.</p>
-                
-                <h2>8. Changes to This Privacy Policy</h2>
-                <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
-                
-                <h2>9. Contact Us</h2>
-                <p>If you have any questions about this Privacy Policy, please contact us:</p>
+                <p>You can disable cookies through your browser settings.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>5. Third-Party Disclosure</h2>
+                <p>We do not sell or trade your personal information. We may share data with:</p>
                 <ul>
-                    <li>By email: privacy@review5star.com</li>
-                    <li>By visiting our contact page</li>
+                    <li>Trusted third-party service providers</li>
+                    <li>Legal authorities when required</li>
+                    <li>Affiliate partners (non-personal data only)</li>
                 </ul>
-                
-                <p class="last-updated">This policy was last updated on June 10, 2024</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>6. Third-Party Links</h2>
+                <p>Our site contains links to casino operators. These third-party sites have separate privacy policies.</p>
+            </div>
+
+            <div class="policy-section">
+                <h2>7. GDPR Compliance</h2>
+                <p>EU users have rights to:</p>
+                <ul>
+                    <li>Access their personal data</li>
+                    <li>Request data correction</li>
+                    <li>Request data deletion</li>
+                    <li>Withdraw consent</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>8. Policy Changes</h2>
+                <p>We will notify users of any privacy policy changes:</p>
+                <ul>
+                    <li>On this privacy policy page</li>
+                    <li>Via email (for subscribers)</li>
+                </ul>
+            </div>
+
+            <div class="policy-section">
+                <h2>9. Contact Information</h2>
+                <p>For privacy-related questions:</p>
+                <ul>
+                    <li>Email: privacy@review5star.com</li>
+                    <li>Contact form on our website</li>
+                </ul>
             </div>
         </div>
-    </main>
+    </div>
+</section>
 
-    <!-- Footer Section -->
-    <footer>
-        <div class="container">
-            <div class="footer-container">
-                <div class="footer-section">
-                    <h4>About Review5Star</h4>
-                    <p>We provide honest reviews of online casinos for Indian players. Our team tests each casino thoroughly to ensure safe and fair gaming experiences.</p>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="topcasino.html">Top Casinos</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="terms.html">Terms of Service</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Casino Categories</h4>
-                    <ul class="footer-links">
-                        <li><a href="#">UPI Casinos</a></li>
-                        <li><a href="#">Bitcoin Casinos</a></li>
-                        <li><a href="#">Live Dealer Casinos</a></li>
-                        <li><a href="#">Mobile Casinos</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-section">
-                    <h4>Legal Information</h4>
-                    <ul class="footer-links">
-                        <li><a href="responsiblegambling.html">Responsible Gambling</a></li>
-                        <li><a href="#">About Us</a></li>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Disclaimer</a></li>
-                    </ul>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>© 2024 Review5Star.com - All rights reserved</p>
-                <p>Disclaimer: Gambling involves risk. Please play responsibly. Only play with money you can afford to lose.</p>
-                <p>18+ Only. The information on this site is for entertainment purposes only.</p>
-                
-                <div class="social-links">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-telegram-plane"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
+<style>
+    /* Privacy Policy Structure - No Colors */
+    .privacy-policy {
+        padding: 20px 0;
+    }
+    
+    .policy-header {
+        text-align: center;
+        margin-bottom: 30px;
+        padding: 20px 0;
+    }
+    
+    .policy-header h1 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+        font-weight: 700;
+    }
+    
+    .last-updated {
+        font-style: italic;
+    }
+    
+    .policy-content {
+        max-width: 900px;
+        margin: 0 auto;
+    }
+    
+    .policy-section {
+        margin-bottom: 30px;
+    }
+    
+    .policy-section h2 {
+        font-size: 1.4rem;
+        margin-bottom: 15px;
+        padding-bottom: 8px;
+        border-bottom-width: 1px;
+        border-bottom-style: solid;
+    }
+    
+    .policy-section p {
+        margin-bottom: 15px;
+        line-height: 1.6;
+    }
+    
+    .policy-section ul {
+        margin: 15px 0;
+        padding-left: 20px;
+    }
+    
+    .policy-section li {
+        margin-bottom: 8px;
+        line-height: 1.5;
+    }
+    
+    @media (min-width: 768px) {
+        .policy-header h1 {
+            font-size: 2.2rem;
+        }
+        
+        .policy-section h2 {
+            font-size: 1.6rem;
+        }
+    }
+</style>
 
-    <!-- Back to Top Button -->
-    <a href="#" class="back-to-top" id="backToTop"><i class="fas fa-arrow-up"></i></a>
-
-    <script>
-        // Back to Top Button functionality
-        const backToTopButton = document.getElementById('backToTop');
-        
-        window.addEventListener('scroll', () => {
-            if (window.pageYOffset > 300) {
-                backToTopButton.classList.add('visible');
-            } else {
-                backToTopButton.classList.remove('visible');
-            }
+<script>
+    // Auto-update current date
+    document.getElementById('current-date').textContent = new Date().toLocaleDateString('en-US', {
+        year: 'numeric', 
+        month: 'long', 
+        day: 'numeric'
+    });
+    
+    // Smooth scrolling for anchor links
+    document.querySelectorAll('.policy-section h2').forEach(heading => {
+        heading.addEventListener('click', function() {
+            this.scrollIntoView({ behavior: 'smooth' });
         });
-        
-        backToTopButton.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-        
-        // Smooth scrolling for anchor links
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function(e) {
-                e.preventDefault();
-                
-                const targetId = this.getAttribute('href');
-                if (targetId === '#') return;
-                
-                const targetElement = document.querySelector(targetId);
-                if (targetElement) {
-                    targetElement.scrollIntoView({
-                        behavior: 'smooth'
-                    });
-                }
-            });
-        });
-    </script>
-</body>
-</html>
+    });
+</script>
