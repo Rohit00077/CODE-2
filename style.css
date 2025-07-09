@@ -90,8 +90,8 @@ body {
 /* Header Styles */
 header {
     background-color: var(--primary-color);
-    padding: 5px 0;
-    min-height: 50px;
+    padding: 2px 0;
+    min-height: 20px;
     position: sticky;
     top: 0;
     z-index: 100;
