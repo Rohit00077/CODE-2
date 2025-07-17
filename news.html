@@ -87,70 +87,103 @@
   </ul>
 </section>
 
-        <section class="regulatory-headlines">
-  <h2>📜 Regulatory Breakthroughs in Gambling</h2>
+<section class="casino-news-today">
+  <h2>🎲 Casino & Gambling News Today</h2>
+  
+  <div class="news-cards">
+    
+    <!-- Card 1 -->
+    <div class="news-card">
+      <img src="https://static01.nyt.com/images/2025/07/15/multimedia/nyc-casino-license.jpg" alt="NYC Casino License">
+      <div class="news-content">
+        <span class="news-source">AP News • Today</span>
+        <h3>Inside the high-stakes battle to win a New York City casino license</h3>
+        <a href="https://apnews.com/article/a804d9bf7a83c90cbbd2226d38ab102d?utm_source=chatgpt.com" target="_blank">Read More →</a>
+      </div>
+    </div>
 
-  <article>
-    <h3>California Moves to Ban Sweepstakes Casinos</h3>
-    <p>The California Senate committee has advanced AB 831, aiming to restrict dual-currency sweepstakes-style casinos operating without traditional gaming licenses. <a href="https://news.worldcasinodirectory.com/online-casino-news-reports?utm_source=chatgpt.com" target="_blank">Read more</a></p>
-  </article>
+    <!-- Card 2 -->
+    <div class="news-card">
+      <img src="https://nypost.com/wp-content/uploads/sites/2/2025/07/hard-rock-queens-casino.jpg" alt="Hard Rock Queens">
+      <div class="news-content">
+        <span class="news-source">New York Post • 2 days ago</span>
+        <h3>Hard Rock International suspends top executive amid bid for Queens casino</h3>
+        <a href="https://nypost.com/2025/07/14/us-news/hard-rock-international-suspends-top-executive-amid-bid-for-queens-casino/?utm_source=chatgpt.com" target="_blank">Read More →</a>
+      </div>
+    </div>
 
-  <article>
-    <h3>Philippines Tightens Online Gambling Payments</h3>
-    <p>The Philippines central bank is implementing stricter payment controls for online gambling operators to protect consumers and combat money laundering risks. <a href="https://news.worldcasinodirectory.com/online-casino-news-reports?utm_source=chatgpt.com" target="_blank">Read more</a></p>
-  </article>
-
-  <article>
-    <h3>Thailand Withdraws Casino Legalization Bill</h3>
-    <p>The Integrated Entertainment Business Bill in Thailand was officially withdrawn due to political turmoil, halting plans for legalized casinos in the country. <a href="https://en.wikipedia.org/wiki/Integrated_Entertainment_Business_Bill?utm_source=chatgpt.com" target="_blank">Read more</a></p>
-  </article>
-
-  <article>
-    <h3>Michigan Shuts Down Illegal Online Casinos</h3>
-    <p>The Michigan Gaming Control Board issued 19 cease‑and‑desist letters to unlicensed gambling sites, reinforcing protections for legal operators. <a href="https://deadspin.com/legal-betting/michigan-online-gaming-regulator-delivers-19-cease-and-desist-letters/?utm_source=chatgpt.com" target="_blank">Read more</a></p>
-  </article>
+    <!-- Card 3 -->
+    <div class="news-card">
+      <img src="https://talksport.com/wp-content/uploads/rolla-casino-review.jpg" alt="Rolla Casino Review">
+      <div class="news-content">
+        <span class="news-source">Talksport • Today</span>
+        <h3>Rolla review & no deposit bonus - Get 1SC free every day a week</h3>
+        <a href="https://talksport.com/us/sweepstakes/3381773/rolla-casino-review-bonus/?utm_source=chatgpt.com" target="_blank">Read More →</a>
+      </div>
+    </div>
+    
+  </div>
 </section>
 
 <style>
-  .regulatory-headlines {
-    background: #fff5e6;
-    padding: 25px;
-    border-radius: 12px;
-    border: 2px solid #f2d099;
-    font-family: 'Arial', sans-serif;
-    margin: 30px auto;
-    max-width: 800px;
-  }
-  .regulatory-headlines h2 {
+  .casino-news-today {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    background: #f8f8f8;
     text-align: center;
-    color: #b45309;
-    font-size: 1.8rem;
-    margin-bottom: 20px;
   }
-  .regulatory-headlines article {
+  .casino-news-today h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 25px;
+  }
+  .news-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+  }
+  .news-card {
     background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    overflow: hidden;
+    text-align: left;
+    transition: transform 0.2s ease-in-out;
+  }
+  .news-card:hover {
+    transform: scale(1.03);
+  }
+  .news-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+  }
+  .news-content {
     padding: 15px;
-    border-left: 5px solid #ff9800;
-    margin-bottom: 15px;
-    border-radius: 8px;
   }
-  .regulatory-headlines article h3 {
-    margin: 0 0 8px;
-    color: #e65100;
+  .news-content .news-source {
+    font-size: 0.9rem;
+    color: #777;
+    display: block;
+    margin-bottom: 8px;
+  }
+  .news-content h3 {
     font-size: 1.2rem;
+    color: #222;
+    margin: 0 0 12px;
   }
-  .regulatory-headlines p {
-    margin: 0;
-    line-height: 1.6;
-  }
-  .regulatory-headlines a {
-    color: #0066cc;
+  .news-content a {
     text-decoration: none;
+    color: #0077cc;
+    font-weight: bold;
   }
-  .regulatory-headlines a:hover {
+  .news-content a:hover {
     text-decoration: underline;
   }
 </style>
+
 
 <style>
   .casino-news {
