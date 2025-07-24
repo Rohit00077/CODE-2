@@ -50,4 +50,43 @@
 
     button {
       width: 100%;
-      background-color: #0056d2
+      background-color: #0056d2;
+      color: white;
+      padding: 14px;
+      font-size: 18px;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #0041a8;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="header">
+    <h1>Contact Us</h1>
+  </div>
+
+  <div class="container">
+    <h2>Get in touch with us</h2>
+    <p class="description">Fill up the form and our team will get back to you within 24 hours</p>
+    
+    <form action="https://formsubmit.co/review5starr@gmail.com" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="tel" name="phone" placeholder="Your Phone" required>
+      <textarea name="message" rows="5" placeholder="Your Message..." required></textarea>
+
+      <!-- FormSubmit hidden fields -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="New Contact from Review5Star">
+      <input type="hidden" name="_next" value="https://review5star.in/thankyou.html">
+
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
+
+</body>
+</html>
